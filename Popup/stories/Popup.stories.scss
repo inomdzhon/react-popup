@@ -1,0 +1,115 @@
+.test-tooltip {
+  z-index: 999;
+
+  &__content {
+    padding: 16px;
+    max-width: 200px;
+    color: #0c1729;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+    .black-theme & {
+      color: #fff;
+      background-color: #3d536c;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    margin: 8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  &__arrow {
+    border-color: #fff;
+
+    .black-theme & {
+      border-color: #3d536c;
+    }
+  }
+
+  &[data-placement^=top] {
+    padding-bottom: 7px;
+  }
+
+  &[data-placement^=top] &__arrow {
+    border-width: 7px 7px 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    bottom: 0;
+    left: calc(50% - 7px);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &[data-placement^=bottom] {
+    padding-top: 7px;
+  }
+
+  &[data-placement^=bottom] &__arrow {
+    border-width: 0 7px 7px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    top: 0;
+    left: calc(50% - 7px);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &[data-placement^=right] {
+    padding-left: 7px;
+  }
+
+  &[data-placement^=right] &__arrow {
+    border-width: 7px 7px 7px 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    left: 0;
+    top: calc(50% - 7px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &[data-placement^=left] {
+    padding-right: 7px;
+  }
+
+  &[data-placement^=left] &__arrow {
+    border-width: 7px 0 7px 7px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    right: 0;
+    top: calc(50% - 7px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.test-tooltip.fade-enter {
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+.test-tooltip.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.test-tooltip.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.test-tooltip.fade-exit.fade-exit-active {
+  opacity: 0;
+  transform: translateY(5px);
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}

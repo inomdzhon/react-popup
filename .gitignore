@@ -1,0 +1,50 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Unix file
+*.bash_history
+.bash_history
+
+# Dependency directory
+node_modules/
+
+# Log files
+logs
+*.log
+npm-debug.log*
+
+# API keys
+.env
+
+# Compiled project
+public/
+
+# Archives
+*.map
+*.gz
+*.zip
+*.rar
+
+# Editors
+.project
+/.idea
+/.idea/*
+*.sublime-project
+*.sublime-workspace
+.brackets.json
+.vscode/*
+*.iml
+
+# Other
+lib-cov
+*.seed
+*.csv
+*.dat
+*.out
+*.pid
+*.swp
+*~
+*.iws
+*.sketch
+*.TODO
